@@ -2,7 +2,6 @@ require 'player'
 
 describe Player do
   let(:subject) { Player.new("jeff") }
-  # let(:player_2) { Player.new("dave") }
 
   context '#initialize' do
     it 'can respond to name' do

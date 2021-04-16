@@ -1,4 +1,9 @@
-<%= @game.player_1.name %> attacked <%= @game.player_2.name  %>
+<%= @game.opponent.name %> attacked <%= @game.current_turn.name  %>
 <br>
+<%= "#{@game.current_turn.name}'s HP is reduced to #{@game.current_turn.hp}!" %>
 
-<%= "#{@game.player_2.name}'s HP is reduced to 40!" %>
+<form action ="/play">
+  <button type="submit" name="next turn">
+    Next Turn
+  </button>
+</form>

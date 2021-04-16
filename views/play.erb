@@ -1,4 +1,6 @@
-+<%= @game.player_1.name %> vs. <%= "#{@game.player_2.name} HP:#{@game.player_2.hp}" %>
+<%= "#{@game.player_1.name} HP:#{@game.player_1.hp}" %> vs. <%= "#{@game.player_2.name} HP:#{@game.player_2.hp}" %>
+<br>
+<%= @game.current_turn.name %>'s turn
 
 <form action ="/attack" method="post">
   <button type="submit" name="attack!">
