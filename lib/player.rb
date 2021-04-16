@@ -8,11 +8,8 @@ class Player
       @hp = DEFAULT_HP
     end
 
-    def attack(player)
-      player.reduce
-    end
-
     def reduce
       @hp -= 10
     end
+
 end

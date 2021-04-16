@@ -2,7 +2,7 @@ require 'player'
 
 describe Player do
   let(:subject) { Player.new("jeff") }
-  let(:player_2) { Player.new("dave") }
+  # let(:player_2) { Player.new("dave") }
 
   context '#initialize' do
     it 'can respond to name' do
@@ -18,13 +18,16 @@ describe Player do
     end
   end
 
-  context '#attack' do
+  context '#reduce' do
     it 'can remove target players hp' do
-      expect { subject.attack(player_2) }.to change { player_2.hp }.by(-10)
+      expect { subject.reduce }.to change { subject.hp }.by(-10)
     end
 
     it 'can be used repeatedly' do
-      expect { 3.times { subject.attack(player_2)  } }.to change { player_2.hp }.by(-30)
+      expect { 3.times { subject.reduce } }.to change { subject.hp }.by(-30)
     end
   end
+
+
+ 
 end
